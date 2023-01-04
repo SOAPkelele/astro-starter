@@ -1,0 +1,21 @@
+---
+import classnames, {
+  fontSize,
+  fontWeight,
+  textAlign,
+} from 'classnames/tailwind'
+
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+
+const container = classnames(
+  fontSize('text-4xl'),
+  fontWeight('font-bold'),
+  textAlign('text-center')
+)
+---
+
+<h1 class={container}>{text}</h1>
